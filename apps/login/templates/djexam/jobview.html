@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+        <link rel="stylesheet" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Exam</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'djexam/css/style.css' %}">
+    </head>
+    <body>
+        <div class='wrapper'>
+            <div class='backlog'>
+                <a href='/success'>Back</a>
+                <a href='/logout'>logout</a>            
+            </div>
+            <h6>{{theJob.job_name}}</h6>
+            <div style = 'border-style: solid; border-color: black; border-width: 1px; width: 30%'>
+                <p>{{theJob.job_desc}}</p>
+                <p>Location: {{theJob.job_loc}}</p>
+                <p>Posted by: {{theJob.poster.first_name}}{{theJob.poster.last_name}}</p>
+                <p>Posted on: {{theJob.created_at}}</p>
+            </div>
+            {% if request.session.mine == 0%}
+            <a href='/{{theJob.id}}/add'>Add To My Jobs</a>
+            {% endif %}            
+        </div>
+    </body>
+</html>

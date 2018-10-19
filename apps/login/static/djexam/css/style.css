@@ -1,0 +1,51 @@
+.regbox{
+    vertical-align: top;
+    display: inline-block;
+}
+.logbox{
+    vertical-align: top;
+    display:inline-block;
+    height: 300px;
+}
+.indextitle{
+text-align: center;
+padding-right: 40px;
+font-size: 180%
+}
+.text{
+    vertical-align: top;
+    display:inline-block;
+}
+.maintable{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    height: auto;
+}
+.available{
+
+    margin-left: 8%;
+    vertical-align: top;
+    display:inline-block;
+}
+.taken{
+    margin-left: 8%;
+    vertical-align: top;
+    display:inline-block;
+}
+.tableheaddiv{
+    width: 100px;
+}
+.tablebodydiv{
+    border-style: solid;
+    border-color: black;
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px
+}
+.backlog{
+    margin-left: 80%;
+}
+.wrapper{
+    margin-left: 40px;
+}
